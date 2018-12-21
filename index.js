@@ -17,7 +17,25 @@ const dogs = [
     age: 3,
     breed: 'Golden Retriever',
     story: 'Owner Passed away'
+  },
+  { 
+    imageURL: 'https://i.ytimg.com/vi/GF60Iuh643I/hqdefault.jpg', 
+    imageDescription: 'Swingin\' all smug like', 
+    name : 'Breh', 
+    sex : 'Male', 
+    age: '7', 
+    breed: 'Pit Bull', 
+    story: 'Got too cool'
   }, 
+  { 
+    imageURL: 'https://i.ytimg.com/vi/3PYLBEQYA00/hqdefault.jpg', 
+    imageDescription: 'Why did you give me a cucumber?', 
+    name : 'Zero',
+    sex : 'Male',  
+    age: '2', 
+    breed: 'Mutt', 
+    story: 'One day he just fell from the sky'
+  }
 ]; 
 const cats = [ 
   {
@@ -28,6 +46,24 @@ const cats = [
     age: 2,
     breed: 'Bengal',
     story: 'Thrown on the street'
+  }, 
+  { 
+    imageURL:'http://www.krugerpark.co.za/images/1-lion-charge-gc590a.jpg', 
+    imageDescription: 'She is on a mission for meat', 
+    name: 'Sweetheart', 
+    sex: 'Female', 
+    age: 11, 
+    breed: 'Part lion, part assasin', 
+    story: 'Ate previous owner'
+  }, 
+  { 
+    imageURL:'https://steemitimages.com/DQmQrtzstdGA77KZqY2CQ2AFVdqfmfympWmgRssbCUNGsU5/30708632_1822218814463863_480317844957954048_n.jpg', 
+    imageDescription: 'Planning global domination', 
+    name: 'Lil\' Demon',
+    sex: 'Female', 
+    age: 22, 
+    breed: 'Egyptian God', 
+    story: 'Owner deceased due to uknown pagan rituals'
   }
 ]; 
 
