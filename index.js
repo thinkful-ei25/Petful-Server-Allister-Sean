@@ -85,11 +85,28 @@ app.get('/api/cat', (req, res) => {
   res.json(cats[0]); 
 }); 
 
+app.delete('/api/cat', (req, res) => { 
+
+  //removes first cat
+  cats.splice(0, 1); 
+
+  res.status(204).end();   
+}); 
+
 app.get('/api/dog', (req, res) => { 
 
   //returns first dog
   res.json(dogs[0]); 
 }); 
+
+app.delete('/api/dog', (req, res) => { 
+
+  //removes first dog
+  dogs.splice(0, 1); 
+
+  res.status(204).end(); 
+})
+
 
 function runServer(port = PORT) {
   const server = app
