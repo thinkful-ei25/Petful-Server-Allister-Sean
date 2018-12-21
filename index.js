@@ -105,9 +105,11 @@ app.get('/api/cat', (req, res, next) => {
   // checkIfAnimalsExist('cats'); 
   let cat = catQueue.peek()
 
-  if (!cat) {
-    next('empty')
-  }
+  cats.forEach(cat => {
+    catQueue.enqueue(cat)
+  });
+
+  cat = catQueue.peek()
   //returns first cat
   res.json(cat);
 });
@@ -124,7 +126,11 @@ app.get('/api/dog', (req, res, next) => {
   let dog = dogQueue.peek()
 
   if (!dog) {
-    next('empty')
+    dogs.forEach(dog => {
+      dogQueue.enqueue(dog)
+    });
+    dog = dogQueue.peek()
+
   }
   // checkIfAnimalsExist('dogs'); 
   //returns first dog
