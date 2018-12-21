@@ -85,7 +85,7 @@ cats.forEach(cat => {
 
 console.log(dogQueue.display())
 
-
+app.use(express.static('public'))
 
 
 
