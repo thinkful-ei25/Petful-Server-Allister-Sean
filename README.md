@@ -1,8 +1,14 @@
 
 
+PETFUL SERVER
+
 Server Endpoints:
 
 /api/cat
+
+Link to live server: https://petful-server-s-a.herokuapp.com/
+
+Link to github: https://github.com/thinkful-ei25/Petful-Server-Allister-Sean
 
 GET - Retrieves the cat that is currently available for adoption. If there are no cats available, returns 404 with message 'Queue empty'
 
