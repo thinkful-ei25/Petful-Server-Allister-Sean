@@ -80,12 +80,14 @@ app.use(
 );
 
 app.get('/api/cat', (req, res) => { 
-  
+  checkIfAnimalsExist('cats'); 
+
   //returns first cat
   res.json(cats[0]); 
 }); 
 
 app.delete('/api/cat', (req, res) => { 
+  checkIfAnimalsExist('cats')
 
   //removes first cat
   cats.splice(0, 1); 
@@ -95,12 +97,15 @@ app.delete('/api/cat', (req, res) => {
 
 app.get('/api/dog', (req, res) => { 
 
+  checkIfAnimalsExist('dogs'); 
   //returns first dog
   res.json(dogs[0]); 
 }); 
 
 app.delete('/api/dog', (req, res) => { 
-
+  
+  checkIfAnimalsExist('dogs'); 
+  
   //removes first dog
   dogs.splice(0, 1); 
 
@@ -108,6 +113,12 @@ app.delete('/api/dog', (req, res) => {
 })
 
 
+
+function checkIfAnimalsExist(animalType){ 
+  if (!animalType || animalType.length === 0){ 
+    throw new Error(`There are no more ${animalType}`)
+  }
+}
 function runServer(port = PORT) {
   const server = app
     .listen(port, () => {
